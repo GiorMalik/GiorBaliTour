@@ -1,0 +1,21 @@
+name = "giorbalitour"
+compatibility_date = "2024-12-17"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "tourbalidbgior"
+database_id = "807c8495-fd0f-432f-be9c-050c0f527d18"
+
+[env.preview]
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "tourbalidbgior"
+database_id = "807c8495-fd0f-432f-be9c-050c0f527d18"
+
+# Local development
+[[d1_databases]]
+binding = "DB"
+database_name = "tourbalidbgior"
+database_id = "807c8495-fd0f-432f-be9c-050c0f527d18"

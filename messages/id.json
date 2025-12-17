@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "cars": "Mobil",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "login": "Masuk",
+    "register": "Daftar",
+    "logout": "Keluar"
+  },
+  "hero": {
+    "title": "Jelajahi Bali dengan Nyaman",
+    "subtitle": "Layanan rental mobil profesional dengan sopir selama 10 jam",
+    "duration": "Durasi: 10 Jam",
+    "includes": "Termasuk Sopir & Bensin",
+    "cta": "Lihat Mobil Kami"
+  },
+  "reviews": {
+    "title": "Apa Kata Pelanggan Kami",
+    "leaveReview": "Tinggalkan Review",
+    "loginToReview": "Login untuk Tinggalkan Review",
+    "rating": "Rating",
+    "comment": "Komentar",
+    "submit": "Kirim Review"
+  },
+  "cars": {
+    "title": "Armada Kami",
+    "capacity": "Kapasitas",
+    "transmission": "Transmisi",
+    "price": "Harga",
+    "viewDetails": "Lihat Detail",
+    "available": "Tersedia",
+    "notAvailable": "Tidak Tersedia"
+  },
+  "about": {
+    "title": "Tentang GiorBaliTour",
+    "description": "Mitra terpercaya Anda untuk rental mobil Bali dengan sopir profesional",
+    "whyChooseUs": "Mengapa Memilih Kami",
+    "feature1": "Sopir Profesional",
+    "feature2": "Mobil Terawat",
+    "feature3": "Layanan 10 Jam",
+    "feature4": "Bensin Termasuk"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "send": "Kirim Pesan",
+    "phone": "Telepon",
+    "address": "Alamat"
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Error",
+    "success": "Berhasil",
+    "close": "Tutup",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "edit": "Edit",
+    "delete": "Hapus",
+    "confirm": "Konfirmasi",
+    "yes": "Ya",
+    "no": "Tidak"
+  }
+}

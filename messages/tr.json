@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Anasayfa",
+    "cars": "Araçlar",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "login": "Giriş",
+    "register": "Kayıt",
+    "logout": "Çıkış"
+  },
+  "hero": {
+    "title": "Bali'yi Konforla Keşfedin",
+    "subtitle": "Profesyonel sürücü ile 10 saatlik araç kiralama hizmeti",
+    "duration": "Süre: 10 Saat",
+    "includes": "Sürücü ve Yakıt Dahil",
+    "cta": "Araçlarımızı Görün"
+  },
+  "reviews": {
+    "title": "Müşterilerimiz Ne Diyor",
+    "leaveReview": "Yorum Yapın",
+    "loginToReview": "Yorum Yapmak İçin Giriş Yapın",
+    "rating": "Puan",
+    "comment": "Yorum",
+    "submit": "Yorumu Gönder"
+  },
+  "cars": {
+    "title": "Filo",
+    "capacity": "Kapasite",
+    "transmission": "Şanzıman",
+    "price": "Fiyat",
+    "viewDetails": "Detayları Gör",
+    "available": "Mevcut",
+    "notAvailable": "Mevcut Değil"
+  },
+  "about": {
+    "title": "GiorBaliTour Hakkında",
+    "description": "Profesyonel sürücülerle Bali araç kiralama için güvenilir ortağınız",
+    "whyChooseUs": "Neden Bizi Seçmelisiniz",
+    "feature1": "Profesyonel Sürücüler",
+    "feature2": "Bakımlı Araçlar",
+    "feature3": "10 Saat Hizmet",
+    "feature4": "Yakıt Dahil"
+  },
+  "contact": {
+    "title": "İletişim",
+    "name": "Ad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Mesaj Gönder",
+    "phone": "Telefon",
+    "address": "Adres"
+  },
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "close": "Kapat",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "confirm": "Onayla",
+    "yes": "Evet",
+    "no": "Hayır"
+  }
+}

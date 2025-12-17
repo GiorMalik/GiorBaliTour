@@ -14,7 +14,10 @@
     "db:d1:migrate": "wrangler d1 migrations apply tourbalidbgior --remote",
     "db:d1:local": "wrangler d1 migrations apply tourbalidbgior --local",
     "db:seed": "bun run drizzle/seed.ts",
-    "db:test": "bun run drizzle/test-db.ts"
+    "db:test": "bun run drizzle/test-db.ts",
+    "assets:download": "bash scripts/download-images.sh",
+    "assets:check": "curl -s http://localhost:3000/api/images | jq '.data'",
+    "setup": "bun run assets:download && bun run dev"
   },
   "dependencies": {
     "@cloudflare/workers-types": "^4.20251217.0",

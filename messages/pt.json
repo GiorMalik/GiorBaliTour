@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "Início",
+    "cars": "Carros",
+    "about": "Sobre",
+    "contact": "Contato",
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair"
+  },
+  "hero": {
+    "title": "Explore Bali com Conforto",
+    "subtitle": "Serviço profissional de aluguel de carros com motorista por 10 horas",
+    "duration": "Duração: 10 Horas",
+    "includes": "Inclui Motorista e Combustível",
+    "cta": "Veja Nossos Carros"
+  },
+  "reviews": {
+    "title": "O Que Nossos Clientes Dizem",
+    "leaveReview": "Deixe uma Avaliação",
+    "loginToReview": "Entre para Deixar uma Avaliação",
+    "rating": "Avaliação",
+    "comment": "Comentário",
+    "submit": "Enviar Avaliação"
+  },
+  "cars": {
+    "title": "Nossa Frota",
+    "capacity": "Capacidade",
+    "transmission": "Transmissão",
+    "price": "Preço",
+    "viewDetails": "Ver Detalhes",
+    "available": "Disponível",
+    "notAvailable": "Indisponível"
+  },
+  "about": {
+    "title": "Sobre GiorBaliTour",
+    "description": "Seu parceiro confiável para aluguel de carros em Bali com motoristas profissionais",
+    "whyChooseUs": "Por Que Nos Escolher",
+    "feature1": "Motoristas Profissionais",
+    "feature2": "Carros Bem Mantidos",
+    "feature3": "Serviço de 10 Horas",
+    "feature4": "Combustível Incluído"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "phone": "Telefone",
+    "address": "Endereço"
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "close": "Fechar",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "confirm": "Confirmar",
+    "yes": "Sim",
+    "no": "Não"
+  }
+}

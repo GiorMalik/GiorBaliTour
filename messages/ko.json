@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "홈",
+    "cars": "자동차",
+    "about": "소개",
+    "contact": "연락처",
+    "login": "로그인",
+    "register": "회원가입",
+    "logout": "로그아웃"
+  },
+  "hero": {
+    "title": "편안한 발리 여행",
+    "subtitle": "전문 기사와 함께하는 10시간 렌터카 서비스",
+    "duration": "이용 시간: 10시간",
+    "includes": "기사 및 유류 포함",
+    "cta": "차량 보기"
+  },
+  "reviews": {
+    "title": "고객 후기",
+    "leaveReview": "후기 남기기",
+    "loginToReview": "로그인 후 후기 남기기",
+    "rating": "평점",
+    "comment": "댓글",
+    "submit": "후기 제출"
+  },
+  "cars": {
+    "title": "차량 목록",
+    "capacity": "수용 인원",
+    "transmission": "변속기",
+    "price": "가격",
+    "viewDetails": "상세 보기",
+    "available": "이용 가능",
+    "notAvailable": "이용 불가"
+  },
+  "about": {
+    "title": "GiorBaliTour 소개",
+    "description": "전문 기사와 함께하는 발리 렌터카 신뢰할 수 있는 파트너",
+    "whyChooseUs": "저희를 선택하는 이유",
+    "feature1": "전문 기사",
+    "feature2": "잘 관리된 차량",
+    "feature3": "10시간 서비스",
+    "feature4": "유류 포함"
+  },
+  "contact": {
+    "title": "연락처",
+    "name": "이름",
+    "email": "이메일",
+    "message": "메시지",
+    "send": "메시지 보내기",
+    "phone": "전화번호",
+    "address": "주소"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "close": "닫기",
+    "cancel": "취소",
+    "save": "저장",
+    "edit": "편집",
+    "delete": "삭제",
+    "confirm": "확인",
+    "yes": "예",
+    "no": "아니오"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "home": "首页",
+    "cars": "汽车",
+    "about": "关于",
+    "contact": "联系",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出"
+  },
+  "hero": {
+    "title": "舒适探索巴厘岛",
+    "subtitle": "专业租车服务，配备司机，服务10小时",
+    "duration": "时长：10小时",
+    "includes": "包含司机与汽油",
+    "cta": "查看我们的汽车"
+  },
+  "reviews": {
+    "title": "客户评价",
+    "leaveReview": "留下评价",
+    "loginToReview": "登录后留下评价",
+    "rating": "评分",
+    "comment": "评论",
+    "submit": "提交评价"
+  },
+  "cars": {
+    "title": "我们的车队",
+    "capacity": "容量",
+    "transmission": "变速箱",
+    "price": "价格",
+    "viewDetails": "查看详情",
+    "available": "可用",
+    "notAvailable": "不可用"
+  },
+  "about": {
+    "title": "关于GiorBaliTour",
+    "description": "您值得信赖的巴厘岛租车合作伙伴，配备专业司机",
+    "whyChooseUs": "为什么选择我们",
+    "feature1": "专业司机",
+    "feature2": "维护良好的车辆",
+    "feature3": "10小时服务",
+    "feature4": "包含燃油"
+  },
+  "contact": {
+    "title": "联系我们",
+    "name": "姓名",
+    "email": "邮箱",
+    "message": "消息",
+    "send": "发送消息",
+    "phone": "电话",
+    "address": "地址"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "close": "关闭",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否"
+  }
+}

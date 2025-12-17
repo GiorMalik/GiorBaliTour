@@ -15,6 +15,32 @@
     "includes": "Include Driver & Petrol",
     "cta": "View Our Cars"
   },
+  "auth": {
+    "loginTitle": "Sign in to your account",
+    "loginSubtitle": "Or",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Full name",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "namePlaceholder": "Enter your full name",
+    "signingIn": "Signing in...",
+    "allFieldsRequired": "All fields are required",
+    "passwordsNotMatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "registrationSuccess": "Registration successful! Please sign in.",
+    "registrationFailed": "Registration failed",
+    "networkError": "Network error. Please try again.",
+    "creatingAccount": "Creating account...",
+    "createAccount": "Create your account",
+    "alreadyHaveAccount": "Already have an account?",
+    "backToHome": "← Back to home"
+  },
   "reviews": {
     "title": "What Our Customers Say",
     "leaveReview": "Leave a Review",
@@ -61,6 +87,7 @@
     "delete": "Delete",
     "confirm": "Confirm",
     "yes": "Yes",
-    "no": "No"
+    "no": "No",
+    "allRightsReserved": "All rights reserved"
   }
 }

@@ -3,6 +3,9 @@ import { getMessages } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/lib/auth';
+import Providers from '@/components/Providers';
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,12 +20,15 @@ export default async function LocaleLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  // Validate that the incoming `locale` parameter is valid
+  // Validate that's incoming `locale` parameter is valid
   if (!locales.includes(locale as any)) notFound();
 
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages();
+
+  // Get session for server components
+  const session = await getServerSession(authOptions);
 
   // RTL support for Arabic
   const dir = locale === 'ar' ? 'rtl' : 'ltr';
@@ -30,9 +36,11 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={dir}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <Providers session={session}>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

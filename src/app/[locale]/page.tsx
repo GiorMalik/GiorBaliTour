@@ -1,9 +1,12 @@
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import AuthStatus from '@/components/AuthStatus';
+import { useSession } from 'next-auth/react';
 
 export default function HomePage() {
   const t = useTranslations('hero');
   const tNav = useTranslations('navigation');
+  const { data: session } = useSession();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -32,9 +35,7 @@ export default function HomePage() {
 
             <div className="flex items-center space-x-4">
               <LanguageSwitcher />
-              <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700">
-                {tNav('login')}
-              </button>
+              <AuthStatus />
             </div>
           </div>
         </div>

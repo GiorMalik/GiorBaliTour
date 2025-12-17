@@ -1,25 +1,15 @@
 import { drizzle } from 'drizzle-orm/d1';
-import { drizzle as drizzleLocal } from 'drizzle-orm/libsql';
-import { createClient } from '@libsql/client';
 import * as schema from './schema';
 
-// Database connection untuk D1
+// Database connection untuk Cloudflare D1 Production
 export function createDB(d1Database?: D1Database) {
+  // Production: Cloudflare D1
   if (d1Database) {
-    // Production: Cloudflare D1
     return drizzle(d1Database, { schema });
-  } else {
-    // Development: Local SQLite dengan libsql
-    try {
-      const sqlite = createClient({
-        url: 'file:./db/tourbalitour.db',
-      });
-      return drizzleLocal(sqlite, { schema });
-    } catch (error) {
-      console.error('Failed to initialize local database:', error);
-      throw new Error('Database initialization failed');
-    }
   }
+  
+  // Fallback untuk development environment
+  throw new Error('D1 database binding required. Make sure D1 is properly configured.');
 }
 
 // Untuk Server Components/API Routes
@@ -27,6 +17,10 @@ export async function getDB(request?: Request) {
   // Di Cloudflare Pages/Peker, D1 binding tersedia di global
   const d1Database = (globalThis as any).DB || 
                      (request && (request as any).cf?.d1?.DB);
+  
+  if (!d1Database) {
+    throw new Error('D1 database binding not found. Check wrangler.toml configuration.');
+  }
   
   return createDB(d1Database);
 }

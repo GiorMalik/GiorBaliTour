@@ -8,6 +8,13 @@
       "when": 1765940900973,
       "tag": "0000_freezing_black_tom",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1765941235699,
+      "tag": "0001_special_alex_wilder",
+      "breakpoints": true
     }
   ]
 }

@@ -1,8 +1,6 @@
-#!/usr/bin/env bun
-
-import { drizzle } from 'drizzle-orm/d1';
+import { NextRequest, NextResponse } from 'next/server';
+import { getDB } from '@/lib/d1';
 import { nanoid } from 'nanoid';
-import * as schema from '../src/schema';
 
 // Fake data untuk reviews
 const fakeReviews = [
@@ -118,30 +116,114 @@ const fakeReviews = [
   },
 ];
 
-async function seed() {
-  console.log('🌱 Starting GiorBaliTour database seeding...');
-  
+export async function POST() {
   try {
-    // In production, this would connect to actual D1 database
-    // For now, we'll just show what would be inserted
-    console.log('📝 Reviews to be inserted:');
+    console.log('🌱 Starting GiorBaliTour review seeding...');
     
-    fakeReviews.forEach((review, index) => {
-      console.log(`  ${index + 1}. ${review.userName} (${review.rating}/5 stars)`);
-      console.log(`     Car ID: ${review.carId}`);
-      console.log(`     Comment: ${review.comment.substring(0, 50)}...`);
-      console.log('');
+    const db = await getDB();
+    
+    // Check if reviews already exist
+    const existingReviews = await db.prepare('SELECT COUNT(*) as count FROM reviews').get();
+    const reviewCount = existingReviews?.count || 0;
+    
+    if (reviewCount > 0) {
+      return NextResponse.json({
+        success: true,
+        message: `Reviews already exist (${reviewCount} reviews). Skipping seeding.`,
+        existingCount: reviewCount,
+        timestamp: new Date().toISOString(),
+      });
+    }
+    
+    // Insert fake reviews
+    let insertedCount = 0;
+    for (const review of fakeReviews) {
+      try {
+        await db.prepare(`
+          INSERT INTO reviews (
+            id, car_id, user_id, user_name, comment, rating, 
+            is_verified, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `).bind(
+          review.id,
+          review.carId,
+          review.userId,
+          review.userName,
+          review.comment,
+          review.rating,
+          review.isVerified ? 1 : 0,
+          Math.floor(review.createdAt.getTime() / 1000),
+          Math.floor(review.updatedAt.getTime() / 1000)
+        ).run();
+        
+        insertedCount++;
+      } catch (error) {
+        console.error(`Error inserting review ${review.id}:`, error);
+      }
+    }
+    
+    console.log(`✅ Successfully inserted ${insertedCount} fake reviews`);
+    
+    return NextResponse.json({
+      success: true,
+      message: 'GiorBaliTour review seeding completed',
+      insertedCount,
+      totalReviews: fakeReviews.length,
+      timestamp: new Date().toISOString(),
     });
-
-    console.log(`✅ ${fakeReviews.length} fake reviews ready for seeding`);
-    console.log('💡 Note: Reviews will be connected to actual cars after admin adds them');
-    console.log('🚀 Run "bun run db:d1:migrate" to apply schema to D1 database');
     
   } catch (error) {
-    console.error('❌ Error during seeding:', error);
-    process.exit(1);
+    console.error('❌ Review seeding failed:', error);
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+      message: 'Review seeding failed',
+      timestamp: new Date().toISOString(),
+    }, { status: 500 });
   }
 }
 
-// Run seeding
-seed();
+export async function GET() {
+  try {
+    console.log('📊 Getting review statistics...');
+    
+    const db = await getDB();
+    
+    // Get review count
+    const reviewCount = await db.prepare('SELECT COUNT(*) as count FROM reviews').get();
+    
+    // Get rating distribution
+    const ratingDist = await db.prepare(`
+      SELECT rating, COUNT(*) as count 
+      FROM reviews 
+      GROUP BY rating 
+      ORDER BY rating
+    `).all();
+    
+    // Get recent reviews
+    const recentReviews = await db.prepare(`
+      SELECT user_name, rating, comment, created_at 
+      FROM reviews 
+      ORDER BY created_at DESC 
+      LIMIT 5
+    `).all();
+    
+    return NextResponse.json({
+      success: true,
+      data: {
+        totalReviews: reviewCount?.count || 0,
+        ratingDistribution: ratingDist.results || [],
+        recentReviews: recentReviews.results || [],
+      },
+      timestamp: new Date().toISOString(),
+    });
+    
+  } catch (error) {
+    console.error('❌ Error getting review stats:', error);
+    return NextResponse.json({
+      success: false,
+      error: error.message,
+      timestamp: new Date().toISOString(),
+    }, { status: 500 });
+  }
+}

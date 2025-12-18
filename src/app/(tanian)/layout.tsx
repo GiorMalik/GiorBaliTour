@@ -4,6 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -45,7 +46,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-bold text-gray-900">
+              <Link href="/" className="text-xl font-bold text-gray-900 hover:text-blue-600">
+                ← Back to Home
+              </Link>
+              <h1 className="text-xl font-bold text-gray-900 ml-4">
                 Admin Panel
               </h1>
             </div>
@@ -61,24 +65,24 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       <div className="flex">
         <aside className="w-64 bg-white shadow-lg min-h-screen">
           <nav className="mt-5 px-2">
-            <a
+            <Link
               href="/tanian/cars"
               className="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900"
             >
               Manage Cars
-            </a>
-            <a
+            </Link>
+            <Link
               href="/tanian/reviews"
               className="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 mt-1"
             >
               Manage Reviews
-            </a>
-            <a
+            </Link>
+            <Link
               href="/tanian/users"
               className="block px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 mt-1"
             >
               Manage Users
-            </a>
+            </Link>
           </nav>
         </aside>
         

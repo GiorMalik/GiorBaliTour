@@ -15,32 +15,6 @@
     "includes": "Include Driver & Petrol",
     "cta": "View Our Cars"
   },
-  "auth": {
-    "loginTitle": "Sign in to your account",
-    "loginSubtitle": "Or",
-    "signUp": "Sign up",
-    "signIn": "Sign in",
-    "signOut": "Sign out",
-    "email": "Email address",
-    "password": "Password",
-    "confirmPassword": "Confirm password",
-    "name": "Full name",
-    "emailPlaceholder": "Enter your email",
-    "passwordPlaceholder": "Enter your password",
-    "confirmPasswordPlaceholder": "Confirm your password",
-    "namePlaceholder": "Enter your full name",
-    "signingIn": "Signing in...",
-    "allFieldsRequired": "All fields are required",
-    "passwordsNotMatch": "Passwords do not match",
-    "passwordTooShort": "Password must be at least 6 characters",
-    "registrationSuccess": "Registration successful! Please sign in.",
-    "registrationFailed": "Registration failed",
-    "networkError": "Network error. Please try again.",
-    "creatingAccount": "Creating account...",
-    "createAccount": "Create your account",
-    "alreadyHaveAccount": "Already have an account?",
-    "backToHome": "← Back to home"
-  },
   "reviews": {
     "title": "What Our Customers Say",
     "leaveReview": "Leave a Review",
@@ -76,6 +50,40 @@
     "phone": "Phone",
     "address": "Address"
   },
+  "auth": {
+    "loginTitle": "Sign in to your account",
+    "loginSubtitle": "Or",
+    "signUp": "Sign up",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signingIn": "Signing in...",
+    "email": "Email address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "or": "Or",
+    "backToHome": "← Back to home",
+    "createAccount": "Create your account",
+    "haveAccount": "Already have an account?",
+    "name": "Full name",
+    "namePlaceholder": "Enter your full name",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "allFieldsRequired": "All fields are required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsNotMatch": "Passwords do not match",
+    "registrationSuccess": "Registration successful! Please sign in.",
+    "registrationFailed": "Registration failed",
+    "networkError": "Network error. Please try again.",
+    "creatingAccount": "Creating account..."
+  },
+  "admin": {
+    "adminPanel": "Admin Panel",
+    "admin": "Admin",
+    "manageCars": "Manage Cars",
+    "manageReviews": "Manage Reviews",
+    "manageUsers": "Manage Users"
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",
@@ -87,7 +95,6 @@
     "delete": "Delete",
     "confirm": "Confirm",
     "yes": "Yes",
-    "no": "No",
-    "allRightsReserved": "All rights reserved"
+    "no": "No"
   }
 }

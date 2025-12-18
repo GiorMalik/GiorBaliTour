@@ -32,20 +32,20 @@ export default function RegisterPage() {
     setSuccess('');
 
     // Validation
-    if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
+    if (!formData.name || !formData.email || !formData.password) {
       setError(t('allFieldsRequired', 'All fields are required'));
-      setLoading(false);
-      return;
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      setError(t('passwordsNotMatch', 'Passwords do not match'));
       setLoading(false);
       return;
     }
 
     if (formData.password.length < 6) {
       setError(t('passwordTooShort', 'Password must be at least 6 characters'));
+      setLoading(false);
+      return;
+    }
+
+    if (formData.password !== formData.confirmPassword) {
+      setError(t('passwordsNotMatch', 'Passwords do not match'));
       setLoading(false);
       return;
     }
@@ -94,7 +94,7 @@ export default function RegisterPage() {
             {t('createAccount', 'Create your account')}
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            {t('alreadyHaveAccount', 'Already have an account?')}
+            {t('haveAccount', 'Already have an account?')}
             <a href="/login" className="font-medium text-blue-600 hover:text-blue-500">
               {t('signIn', 'Sign in')}
             </a>
@@ -123,7 +123,6 @@ export default function RegisterPage() {
                 id="name"
                 name="name"
                 type="text"
-                autoComplete="name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -205,10 +204,23 @@ export default function RegisterPage() {
           </div>
         </form>
         
-        <div className="mt-6 text-center">
-          <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
-            {t('backToHome', '← Back to home')}
-          </a>
+        <div className="mt-6">
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-gray-50 text-gray-500">
+                {t('or', 'Or')}
+              </span>
+            </div>
+          </div>
+          
+          <div className="mt-6 text-center">
+            <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
+              {t('backToHome', '← Back to home')}
+            </a>
+          </div>
         </div>
       </div>
     </div>
